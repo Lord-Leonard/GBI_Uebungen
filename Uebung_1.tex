@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\section*{Aufgabe 2}
+
+\subsection*{a)}
+Behauptung: 
+
+Für beliebige Mengen $A, B, C$ gilt 
+ $(A \cup B) \cap C = A \cup (B \cap C)$
+
+\subsubsection*{Gewählte Mengen:}
+\begin{align*}
+A &= \{1,2\} \\
+B &= \{2,3\} \\
+C &= \{1,3\}
+\end{align*}
+
+\subsubsection*{Linke Seite: $(A \cup B) \cap C$}
+\begin{align*}
+	(A \cup B) \cap C &= (\{1,2\} \cup \{2,3\}) \cap \{1,3\} \\
+	&= \{1,3\}
+\end{align*}
+
+\subsubsection*{Rechte Seite: $A \cup (B \cap C)$}
+\begin{align*}
+	A \cup (B \cap C) &= \{1,2\} \cup (\{2,3\} \cap \{1,3\}) \\
+	&= \{1,2,3\}
+\end{align*}
+
+\subsubsection*{Vergleich:}
+$$\{1, 3\} \neq \{1, 2, 3\}$$
+
+q.e.d.
+
+\subsection*{b)}
+Behauptung: 
+
+Für beliebige Mengen $A, B$ gilt 
+$\mathcal{P}(A \cup B) = \mathcal{P}(A) \cup \mathcal{P}(B)$
+
+\subsubsection*{Gewählte Mengen:}
+\begin{align*}
+A &= \{1,2\} \\
+B &= \{2,3\}
+\end{align*}
+
+\subsubsection*{Linke Seite: $\mathcal{P}(A \cup B)$}
+\begin{align*}
+	\mathcal{P}(A \cup B) &= \mathcal{P}(\{1,2\} \cup \{2,3\}) \\
+												&= \{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\}
+\end{align*}
+
+\subsubsection*{Rechte Seite: $\mathcal{P}(A) \cup \mathcal{P}(B)$}
+\begin{align*}
+	\mathcal{P}(A) \cup \mathcal{P}(B) &= \mathcal{P}(\{1,2\}) \cup \mathcal{P}(\{2,3\}) \\
+																		 &= \{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{2,3\}\}
+\end{align*}
+
+\subsubsection*{Vergleich:}
+$$\{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\}
+ \neq \{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{2,3\}\}$$
+
+q.e.d.
+
+\subsection*{c)}
+
+\subsection*{d)}
+Behauptung: 
+
+Für beliebige Mengen $A, B, C, D$ gilt 
+$(A \setminus B) \times (C \setminus D) = (A \times C) \setminus (B \times D)$.
+
+\subsubsection*{Gewählte Mengen:}
+\begin{align*}
+A &= \{1, 2\} \\
+B &= \{2\} \\
+C &= \{3, 4\} \\
+D &= \{4\}
+\end{align*}
+
+\subsubsection*{Linke Seite: $(A \setminus B) \times (C \setminus D)$}
+\begin{align*}
+A \setminus B &= \{1, 2\} \setminus \{2\} = \{1\} \\
+C \setminus D &= \{3, 4\} \setminus \{4\} = \{3\} \\
+(A \setminus B) \times (C \setminus D) &= \{1\} \times \{3\} = \{(1, 3)\}
+\end{align*}
+
+\subsubsection*{Rechte Seite: $(A \times C) \setminus (B \times D)$}
+\begin{align*}
+A \times C &= \{1, 2\} \times \{3, 4\} = \{(1, 3), (1, 4), (2, 3), (2, 4)\} \\
+B \times D &= \{2\} \times \{4\} = \{(2, 4)\} \\
+(A \times C) \setminus (B \times D) &= \{(1, 3), (1, 4), (2, 3), (2, 4)\} \setminus \{(2, 4)\} \\
+&= \{(1, 3), (1, 4), (2, 3)\}
+\end{align*}
+
+\subsubsection*{Vergleich:}
+$$\{(1, 3)\} \neq \{(1, 3), (1, 4), (2, 3)\}$$
+
+q.e.d.
+
+\section*{Aufgabe 3}
+Der Term besagt: 
+Aus einer Menge mit mindestens 6 Elementen existieren 3 Elemente welche alle miteinander verknüpft sind oder in gar keiner Verbindung stehen.
+
+
+\section*{Aufgabe 4}
+\subsection*{a )}
+
+$w = CBBA$
+
+$f_{\text{Alice}}(w)$ = 01101 0 0 01
+
+$f_{\text{Bob}}(w)$ = 01 10 10 001
+
+\subsection*{b)}
+Voraussetzung für gleichheit der Decodierung ist unter anderem die gleichheit der Länge der decodierten Wörter.
+
+Die Codierungen der Zeichen für Alice und Bob sind unterschiedlich lang: 
+Länge $A_{\text{Alice}}$ = 2 Bit $A_{\text{Bob}}$ = 3 Bit
+
+Länge $B_{\text{Alice}}$ = 1 Bit $B_{\text{Bob}}$ = 2 Bit
+
+Länge $C_{\text{Alice}}$ = 5 Bit $C_{\text{Bob}}$ = 2 Bit
+
+Länge $D_{\text{Alice}}$ = 2 Bit $D_{\text{Bob}}$ = 3 Bit
+
+Daraus ergibt sich für ein Wort w mit der Länge n, wobei $n_{A}$, $n_{B}$, $n_{C}$, $n_{D}$ die Häufigkeit der jeweiligen Zeichen darstellen:
+
+\begin{align*}
+	\text{Länge}_{ALice} &= 2n_{A} + n_{B} + 5n_{C} + 2n_{D} \\
+	\text{Länge}_{Bob} &= 3n_{A} + 2n_{B} + 2n_{C} + 3n_{D}
+\end{align*}
+
+Diese müssen gleich sein:
+
+
+\begin{align*}
+	2n_{A} + n_{B} + 5n_{C} + 2n_{D} &= 3n_{A} + 2n_{B} + 2n_{C} + 3n_{D} \\
+	3n_{C}&= n_{A} + n_{B} + 3n_{D}
+\end{align*}
+
+
+\end{document}
+
