@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\section*{Aufgabe 1}
+
+\subsection*{a)}
+\begin{enumerate}
+\item (G)
+\item (K)
+\item (B)
+\item (O)
+\item (C) 
+\item (J)
+\item (N)
+\item (Q)  
+\item (A)
+\item (E)
+\item (M)
+\end{enumerate}
+
+\subsection*{b)}
+
+Seien A, B und C beliebige Menge. Wir zeigen, dass $(A \cup B) \setminus (C \setminus A) \subseteq A \cup (B \setminus C)$. \\
+Sei dazu $a \in (A \cup B) \setminus (C \setminus A)$ beliebig. \\
+Dann gilt $a \in A \cup B$ und $a \notin C \setminus A$. \\
+Aus $a \in A \cup B$ folgt, dass entweder $a \in A$ oder $a \in B$. \\
+Wir machen eine Fallunterscheidung.
+\subsubsection*{Fall 1: $a \in A$} 
+Dann ist $a \in A \cup (B \setminus C)$, weil $A \subseteq A \cup (B \setminus C)$.
+
+\subsubsection*{Fall 2: $a \in B$}
+Aus $a \notin C \setminus A$ ergibt sich, dass $a \notin C$. \\
+Daraus folgt für $a \in B$: $a \in A \cup (B \setminus C)$.
+
+
+\section*{Aufgabe 2}
+\subsection*{a)}
+\subsubsection*{Rechtseindeutigkeit:}
+Nein, da für $k = 0$ das Paar $(2,0) \in R_{1}$ ist und für $k = 2$ das Paar $(2,4) \in R_{1}$. Da Da $0 \neq 4$ steht $n$ zu verschiedenen $m$ in Relation.
+
+\subsubsection*{Linkseindeutigkeit:}
+Nein, da für $k = 0$ das Paar $(0,0) \in R_{1}$ ist und $(0,1) \in R_{1}$. Da Da $0 \neq 1$ steht $m$ zu verschiedenen $n$ in Relation.
+
+\subsubsection*{Rechtstotal:}
+Für $k = 1$ gilt $n = m$. Demnach wird jedem $n$ ein $m$ zugeordnet.
+
+\subsubsection*{Linkstotal:}
+Für $k = 1$ gilt $n = m$. Demnach wird jedem $m$ ein $n$ zugeordnet.
+
+\subsection*{b)}
+$R_{2} = \{(n, m) \in \mathbb{Z}^2: \text{n ist gerade und m ist gerade}\}$
+
+\subsubsection*{Endlose Tupel:}
+Ja, weil es endlos viele gerade $n$ und $m$ in $\mathbb{Z}$ gibt. Demnach ist $n \times m$ ebenfalls endlos.
+
+\subsubsection*{Rechtseindeutig: }
+Nein, da für $n = 2$, $(2,2) \in R_{2}$ und $(2,4) \in R_{2}$. \\
+$2 \neq 4$, demnach ist $R_{2}$ nicht rechtseindeutig.
+
+\subsubsection*{Linkseindeutig: }
+Nein, da für $m = 4$, $(2,4) \in R_{2}$ und $(4,4) \in R_{2}$. \\
+$4 \neq 2$, demnach ist $R_{2}$ nicht linkseindeutig.
+
+\subsubsection*{Rechtstotal: }
+Nein, da $R_{2}$ lediglich gerade Zahlen für die Tupeleinträge zulässt.
+
+\subsubsection*{Linkstotal: }
+Nein, da $R_{2}$ lediglich gerade Zahlen für die Tupeleinträge zulässt.
+
+\subsection*{c)}
+Beim betrachten der Relation fällt auf, dass lediglich Wertepaare gültig sind, für die gilt: $x - y \geq 3$ und $x - y < \pi$. Da x und y ganzzahlig sind, beschreänkt sich die Relation auf $x - y = 3$. \\
+Mit dieser Erkentniss kann die Relation wiefolgt ausgedrückt werden: 
+\begin{align*}
+R_{2} = \{(x, y) \in \mathbb{Z}^2: x = y + 3\}
+\end{align*}
+Auf basis dieser Relation lassen sich die Eigenschaften recht einfach erkennen:
+
+\subsubsection*{Rechtseindeutig: }
+Ja, da $x$ nach $y + 3$ \"abbildet" und somit jedem x genau ein y zugeordnet wird.
+
+\subsubsection*{Linkseindeutig: }
+Ja, da $y$ durch $x - 3$ \"abgebildet" wird und demnach jedem y genau ein x zugeordnet wird.
+
+\subsubsection*{Rechtstotal: }
+Ja, da $\mathbb{Z}$ unendlich ist, wird es immer ein $x$ geben welches $y$ entspricht.
+
+\subsubsection*{Linkstotal: }
+Ja, da $\mathbb{Z}$ unendlich ist, wird es immer ein $y$ geben welches $x$ entspricht.
+
+\section*{Aufgabe 3}
+\subsection*{a)}
+Es kann $2^a$ rechtstotale Relationen geben, da jedes Element der Potenzmenge von $A$ mit allen Elementen aus $B$ in Relation stehen kann.
+
+\subsection*{b)}
+Es gibt $a!$ mögliche Funktionen, weil jedes Element aus $A$ mit einem Element aus $B$ in Relation stehen muss. Für jedes nachfolgende Element aus $A$ veringern sich die möglichen Relationen mit Elementen aus $B$, da jedes Element $a$ aus $A$ maximal einmal mit einem Element aus $B$ in Relation stehen darf.
+
+\section*{Aufgabe 4}
+\subsection*{a)}
+
+$D: S_{n} \rightarrow 2^{S_{n}}, (x, y) \mapsto \{(a, b) | a, b \in \mathbb{N}, \delta, \epsilon \in \mathbb{Z}, \\
+	a = 
+	\begin{cases}
+		x + \delta & \text{für }b = y \\
+		x & \text{für }b = y + \epsilon
+\end{cases}
+, b = 
+	\begin{cases}
+		y + \epsilon & \text{für }b = x \\
+		y & \text{für }b = x + \delta
+\end{cases}
+, \vert \delta \vert \leq n - x, \vert \epsilon \vert \leq n - y
+\}$
+
+\subsection*{b)}
+Nicht surjektiv, da nie alle Felder dominiert werden, außer für $n = 1$ wodurch nie auf die gesammte Potenzmenge abgebildet wird, aber injektiv, da jedem Tupel eine einzigartige Menge der Dominierten Positionen zugeordnet wird; Jede Position dominiert eine andere Menge an Feldern.
+
+\end{document}
+
